@@ -10,7 +10,7 @@ import { Juego } from '../juego';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor(private juegoService : JuegosService) { }
+  constructor(private juegosService : JuegosService) { }
 
   ngOnInit() {
     this.getJuegos();
@@ -20,7 +20,7 @@ export class ListadoComponent implements OnInit {
   juegos : Juego[];
 
   getJuegos():void{
-    this.juegoService.getJuegos()
+    this.juegosService.getJuegosActivos()
       .subscribe(juegos => { this.juegos = juegos });
   }
 
