@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { ListadoComponent } from './listado/listado.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DetallesComponent } from './detalles/detalles.component';
+import { JuegosService } from './juegos.service';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,12 @@ import { DetallesComponent } from './detalles/detalles.component';
     DetallesComponent,
   ],
   imports: [
-    BrowserModule,
-    FormsModule, 
-    HttpClientModule, AppRoutingModule
+    BrowserModule, 
+    HttpClientModule, AppRoutingModule,
+    FormsModule,
 
   ],
-  providers: [],
+  providers: [JuegosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

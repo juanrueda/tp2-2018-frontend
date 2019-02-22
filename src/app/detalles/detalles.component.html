@@ -1,3 +1,13 @@
-<p>
-  <!-- {{detalle[0].hora_inicio}} --> hola
-</p>
+
+<div *ngIf = "detalle" class="detalle-juego">
+  <p>
+    Hora inicio: {{detalle[0].hora_inicio}}
+  </p>
+  
+  <!-- Esto es lo que no anda. Como acceder al array de eventos? -->
+  <p>
+    Eventos: {{detalle[0].eventos[0].id_eventos}}
+  </p>
+  
+  
+</div>

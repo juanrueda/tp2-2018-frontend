@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { JuegosService } from '../juegos.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,11 +11,11 @@ export class DetallesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private juegosService: JuegosService) { }
 
+  detalle = [];
+
   ngOnInit() {
     this.getDetalleJuego();
   }
-
-  detalle : any;
 
   getDetalleJuego():void{
     const id = +this.route.snapshot.paramMap.get('id');
