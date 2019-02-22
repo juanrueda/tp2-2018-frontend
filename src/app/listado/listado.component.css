@@ -1,0 +1,24 @@
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center
+}
+
+.listado{
+    text-align: center
+}
+
+li {
+    list-style-type: none;
+    color: black;
+}
+
+li :hover{
+    background-color: lightblue
+}
+
+:link{
+    text-decoration:none
+    
+}
+

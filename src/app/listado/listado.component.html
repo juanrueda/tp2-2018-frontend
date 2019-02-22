@@ -1,6 +1,9 @@
-<h1>Listado </h1>
-<ul>
-  <li *ngFor="let juego of juegos">
-    {{ juego.id_juego }}
-  </li>
-</ul>
+<h1> Juegos actualmente activos </h1>
+<div class="listado">
+  <ul>
+    <li *ngFor="let juego of juegos">
+      <!-- <a href="/localhost:3000/juegos/"+{juego.id_juego}>{{ juego.id_juego }}</a> -->
+      <a href="#">{{ juego.id_juego }}</a>
+    </li>
+  </ul>
+</div>
