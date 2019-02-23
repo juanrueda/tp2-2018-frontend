@@ -24,4 +24,11 @@ export class ListadoComponent implements OnInit {
       .subscribe(juegos => { this.juegos = juegos });
   }
 
+  finalizarJuego(id: number){
+    var juego = {
+      id_juego : id
+    }
+    this.juegosService.setFinJuego(juego)
+  }
+
 }

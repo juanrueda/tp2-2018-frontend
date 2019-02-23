@@ -11,7 +11,7 @@ export class DetallesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private juegosService: JuegosService) { }
 
-  detalle = [];
+  detalle = {}
 
   ngOnInit() {
     this.getDetalleJuego();

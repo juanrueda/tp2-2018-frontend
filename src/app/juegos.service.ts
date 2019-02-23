@@ -16,4 +16,7 @@ export class JuegosService {
     return this.http.get(this.base_url+'/juegos/'+id);
   }
 
+  setFinJuego(juego : any): Observable<any>{
+    return this.http.post(this.base_url+'/juegos/finalizarJuego', juego);
+  }
 }
