@@ -29,6 +29,7 @@ export class ListadoComponent implements OnInit {
       id_juego : id
     }
     this.juegosService.setFinJuego(juego)
+      .subscribe(() => this.getJuegos());
   }
 
 }
