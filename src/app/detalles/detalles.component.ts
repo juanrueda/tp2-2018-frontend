@@ -11,7 +11,8 @@ export class DetallesComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private juegosService: JuegosService) { }
 
-  detalle = {}
+  detalle: any
+  detalles = {}
 
   ngOnInit() {
     this.getDetalleJuego();
@@ -20,7 +21,7 @@ export class DetallesComponent implements OnInit {
   getDetalleJuego():void{
     const id = +this.route.snapshot.paramMap.get('id');
     this.juegosService.getDetalleJuego(id)
-      .subscribe(detalle => this.detalle = detalle)
+      .subscribe(detalles => this.detalles = detalles)
   }
 
 }

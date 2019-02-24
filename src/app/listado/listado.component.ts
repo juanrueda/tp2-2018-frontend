@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JuegosService } from '../juegos.service';
 import { Juego } from '../juego';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-listado',
@@ -10,7 +11,7 @@ import { Juego } from '../juego';
 })
 export class ListadoComponent implements OnInit {
 
-  constructor(private juegosService : JuegosService) { }
+  constructor(private juegosService : JuegosService, private router: Router) { }
 
   ngOnInit() {
     this.getJuegos();
@@ -29,7 +30,7 @@ export class ListadoComponent implements OnInit {
       id_juego : id
     }
     this.juegosService.setFinJuego(juego)
-      .subscribe(() => this.getJuegos());
+      .subscribe(() => this.router.navigate(['listado/detalles', juego.id_juego]));
   }
 
 }

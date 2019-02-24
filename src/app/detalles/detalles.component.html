@@ -1,12 +1,14 @@
 
 <div class="detalle-juego">
-  <p>
-    Hora inicio: {{detalle.hora_inicio}}
-  </p>
-  
-  <!-- Esto es lo que no anda. Como acceder al array de eventos? -->
-  <!-- <p>
-    Eventos: {{detalle.eventos[0].id_eventos}}
-  </p>
-   -->
+  <!-- tipos de eventos, hora inicio, hora fin, hora evento, equipos, eventos -->
+  <ul >
+    <li *ngFor = "let detalle of detalles">
+      Hora inicio juego: {{detalle.juego.hora_inicio}} |
+      Hora fin juego : {{detalle.juego.hora_fin}} |
+      Hora evento: {{detalle.hora_evento}} |
+      Evento: {{detalle.tipos_evento.nombre_evento}} |
+      Equipo: {{detalle.equipo.nombre_equipo}} |
+      
+    </li>
+  </ul>
 </div>

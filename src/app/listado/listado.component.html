@@ -2,7 +2,6 @@
 <div class="listado">
   <ul>
     <li *ngFor="let juego of juegos">
-      <!-- <a routerLink="detalles/{{juego.id_juego}}">{{ juego.id_juego }}</a> -->
       {{juego.id_juego}} <button (click)="finalizarJuego(juego.id_juego)">Finalizar juego</button>
     </li>
   </ul>
